@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button1 = (Button) findViewById(R.id.ok);
+		setButton1((Button) findViewById(R.id.ok));
 		mValue = (EditText) findViewById(R.id.value);
 
 		mButtonOk.setOnClickListener(new OnClickListener() {
@@ -54,4 +54,12 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+	public Button getButton1() {
+		return Button1;
+	}
+
+	public void setButton1(Button button1) {
+		Button1 = button1;
+	}
 }
