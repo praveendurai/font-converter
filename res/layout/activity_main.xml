@@ -6,37 +6,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.firstapp.MainActivity" >
+    tools:context="com.example.formconverter.MainActivity" >
 
-    <Button
-        android:id="@+id/hello_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp"
-        android:text="Convert Font" />
+     <EditText
+         android:id="@+id/value"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="84dp"
+         android:ems="10"
+         android:hint="Type ur text here" >
 
-    <TextView
-        android:id="@+id/Hellotextview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/hello_button"
-        android:layout_below="@+id/hello_button"
-        android:layout_marginTop="44dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+         <requestFocus />
+     </EditText>
 
-    <EditText
-        android:id="@+id/input_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/hello_button"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="37dp"
-        android:ems="10"
-        android:inputType="" >
-
-        <requestFocus />
-    </EditText>
+     <Button
+         android:id="@+id/ok"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/value"
+         android:layout_below="@+id/value"
+         android:layout_marginTop="36dp"
+         android:text="Convert it . . ." />
 
 </RelativeLayout>
+ 
