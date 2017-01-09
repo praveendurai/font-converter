@@ -1,36 +1,26 @@
 package com.example.fontconverter;
 
-import android.support.v7.app.ActionBarActivity;
-import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
+public class javfirst extends Activity {
+	 TextView result;
+	
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.first);
+		result = (TextView)findViewById(R.id.textView1);
+		result.setText("Test");
+		Typeface custom_font = Typeface.createFromAsset(getAssets(), "Pacifico.ttf");	
+		Intent i = getIntent();
+		String data_from_main_activity = i.getStringExtra("username");
+		result.setTypeface(custom_font);
+		result.setText( data_from_main_activity);
+		
+	}
 
-@SuppressLint("NewApi") public class javfirst extends ActionBarActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
